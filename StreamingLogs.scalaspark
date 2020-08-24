@@ -1,0 +1,15 @@
+// start the shell with this command:
+// spark-shell --master local[2]
+
+import org.apache.spark.streaming.StreamingContext
+import org.apache.spark.streaming.StreamingContext._
+import org.apache.spark.streaming.Seconds
+
+// Configure the Streaming Context based on the shell's Spark Context 
+// with a 1 second batch duration
+var ssc = new StreamingContext(sc,Seconds(1))
+
+// TODO
+
+ssc.start()
+ssc.awaitTermination()
